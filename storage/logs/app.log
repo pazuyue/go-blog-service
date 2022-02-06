@@ -1,0 +1,107 @@
+2022/01/09 17:31:23 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1641720683376854000}
+2022/01/09 17:32:49 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1641720769649075100}
+2022/01/09 17:37:51 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1641721071703482400}
+2022/01/09 17:49:09 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1641721749377490800}
+2022/01/09 17:50:15 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: State必须是[0 1]中的一个","time":1641721815699119800}
+2022/01/10 17:17:17 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1641806237627309400}
+2022/01/10 17:17:23 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: State必须是[0 1]中的一个","time":1641806243417082900}
+2022/01/10 17:17:24 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: State必须是[0 1]中的一个","time":1641806244734251800}
+2022/01/10 17:17:25 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: State必须是[0 1]中的一个","time":1641806245326264200}
+2022/01/10 17:20:23 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1641806423477128400}
+2022/01/10 17:53:21 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1641808401921465600}
+2022/01/10 17:53:26 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: State必须是[0 1]中的一个","time":1641808406896151700}
+2022/01/10 17:53:28 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: State必须是[0 1]中的一个","time":1641808408986036400}
+2022/01/10 17:53:30 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: State必须是[0 1]中的一个","time":1641808410440424500}
+2022/01/10 17:55:01 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1641808501687513200}
+2022/01/10 18:00:56 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1641808856597529900}
+2022/01/10 18:00:59 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: State必须是[0 1]中的一个","time":1641808859721836800}
+2022/01/10 18:01:49 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: State必须是[0 1]中的一个","time":1641808909922920000}
+2022/01/29 20:35:52 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1643459752137346500}
+2022/01/29 20:35:59 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: Name为必填字段","time":1643459759155388500}
+2022/01/29 20:36:11 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: Name为必填字段","time":1643459771048387200}
+2022/01/29 20:37:09 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: Name为必填字段","time":1643459829517692800}
+2022/01/29 20:42:03 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: Name长度必须至少为3个字符,CreatedBy为必填字段","time":1643460123693056900}
+2022/01/29 20:56:10 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643460970566157900}
+2022/01/29 21:00:00 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643461200019178700}
+2022/01/29 21:00:14 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643461214890625300}
+2022/01/29 21:00:17 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643461217937510400}
+2022/01/29 21:00:26 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643461226546967100}
+2022/01/29 21:00:40 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643461240202009000}
+2022/01/29 21:00:45 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643461245973665100}
+2022/01/29 21:00:49 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643461249728260100}
+2022/01/29 21:00:53 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643461253091097900}
+2022/01/29 21:01:16 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643461276298548300}
+2022/01/29 21:01:34 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643461294770415300}
+2022/01/29 21:02:21 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1643461341151101700}
+2022/01/30 11:38:43 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1643513923023999600}
+2022/01/30 11:38:49 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643513929810256700}
+2022/01/30 11:38:51 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643513931998674400}
+2022/01/30 11:40:38 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1643514038702591100}
+2022/01/30 11:40:45 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1643514045119786500}
+2022/01/30 11:42:25 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643514145554565800}
+2022/01/30 11:44:12 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1643514252753132400}
+2022/01/30 11:44:17 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643514257341885200}
+2022/01/30 11:45:29 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643514329209665800}
+2022/01/30 11:46:30 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1643514390261465400}
+2022/01/30 12:03:10 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1643515390678001200}
+2022/01/30 12:04:04 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643515444976689600}
+2022/01/30 12:04:13 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1643515453505231800}
+2022/01/30 12:04:16 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643515456190873500}
+2022/01/30 12:04:16 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643515456812886200}
+2022/01/30 12:06:35 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1643515595896187700}
+2022/01/30 12:06:42 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643515602013821700}
+2022/01/30 12:23:32 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1643516612914562000}
+2022/01/30 12:24:06 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643516646983725800}
+2022/01/30 12:24:18 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1643516658580777300}
+2022/01/30 12:24:24 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1643516664403595400}
+2022/01/30 12:24:26 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643516666516376500}
+2022/01/30 12:26:03 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1643516763996726900}
+2022/01/30 12:26:06 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643516766716804000}
+2022/01/30 12:28:24 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1643516904120653300}
+2022/01/30 12:28:26 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643516906795269100}
+2022/01/30 12:28:42 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1643516922236859100}
+2022/01/30 12:28:43 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643516923978435200}
+2022/01/30 12:33:22 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1643517202887767000}
+2022/01/30 12:37:25 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1643517445897131400}
+2022/01/30 12:37:28 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643517448147969000}
+2022/01/30 12:37:45 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643517465477547600}
+2022/01/30 12:38:24 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643517504075856600}
+2022/01/30 12:39:01 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643517541065868000}
+2022/01/30 12:39:10 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643517550764630700}
+2022/01/30 12:41:40 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1643517700548118400}
+2022/01/30 12:42:52 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1643517772271166400}
+2022/01/30 12:42:54 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643517774834804100}
+2022/01/30 12:43:13 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643517793468243600}
+2022/01/30 12:43:36 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643517816054915100}
+2022/01/30 12:44:27 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1643517867610952100}
+2022/01/30 12:45:19 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643517919650971700}
+2022/01/30 12:45:56 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1643517956863162900}
+2022/01/30 12:47:20 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643518040324887400}
+2022/01/30 14:34:56 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1643524496360596200}
+2022/01/30 14:34:58 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643524498510741500}
+2022/01/30 14:35:10 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643524510314697000}
+2022/01/30 14:35:28 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643524528000407100}
+2022/01/30 14:35:35 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643524535031138000}
+2022/01/30 14:36:43 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1643524603757993000}
+2022/01/30 14:37:05 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643524625114108400}
+2022/01/30 14:45:59 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643525159065475600}
+2022/01/30 14:46:17 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643525177588689800}
+2022/01/30 14:46:32 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643525192744381500}
+2022/01/30 14:50:57 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643525457169366800}
+2022/01/30 14:51:38 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643525498202542200}
+2022/01/30 14:54:36 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643525676175276900}
+2022/01/30 14:54:37 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643525677126158800}
+2022/01/30 14:56:02 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643525762328239100}
+2022/01/30 14:56:25 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1643525785079544000}
+2022/01/30 14:56:53 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643525813536675200}
+2022/01/30 20:00:44 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1643544044759370200}
+2022/01/30 20:00:46 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643544046838437900}
+2022/01/30 20:01:57 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1643544117482268700}
+2022/01/30 20:01:59 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643544119526828300}
+2022/01/30 20:02:27 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643544147237852900}
+2022/01/30 20:08:57 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1643544537628173900}
+2022/01/30 20:09:21 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1643544561638151000}
+2022/01/31 11:37:31 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1643600251848592000}
+2022/01/31 11:39:06 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1643600346384844400}
+2022/01/31 11:40:08 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1643600408411340500}
+2022/01/31 12:30:04 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1643603404588097200}
