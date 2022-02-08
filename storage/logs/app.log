@@ -105,3 +105,41 @@
 2022/01/31 11:39:06 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1643600346384844400}
 2022/01/31 11:40:08 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1643600408411340500}
 2022/01/31 12:30:04 {"callers":["D:/Users/Lenovo/go/src/blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1643603404588097200}
+2022/02/08 11:46:58 {"callers":["D:/go_work/src/go-blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1644292018973154400}
+2022/02/08 11:47:01 {"callers":["D:/go_work/src/go-blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: Name为必填字段","time":1644292021607864700}
+2022/02/08 11:47:10 {"callers":["D:/go_work/src/go-blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: Name为必填字段","time":1644292030124263000}
+2022/02/08 13:35:50 {"callers":["D:/go_work/src/go-blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: Name长度必须至少为3个字符","time":1644298550992447400}
+2022/02/08 13:36:53 {"callers":["D:/go_work/src/go-blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1644298613606392700}
+2022/02/08 13:47:42 {"callers":["D:/go_work/src/go-blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1644299262755561600}
+2022/02/08 13:48:22 {"callers":["D:/go_work/src/go-blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1644299302503896700}
+2022/02/08 13:49:17 {"callers":["D:/go_work/src/go-blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1644299357435426600}
+2022/02/08 13:52:01 {"callers":["D:/go_work/src/go-blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1644299521539892700}
+2022/02/08 13:52:16 {"callers":["D:/go_work/src/go-blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1644299536521647400}
+2022/02/08 13:52:53 {"callers":["D:/go_work/src/go-blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1644299573052955300}
+2022/02/08 13:58:04 {"callers":["D:/go_work/src/go-blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1644299884557439800}
+2022/02/08 13:59:39 {"callers":["D:/go_work/src/go-blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1644299979446902200}
+2022/02/08 14:04:26 {"callers":["D:/go_work/src/go-blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1644300266281876100}
+2022/02/08 14:06:33 {"callers":["D:/go_work/src/go-blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1644300393729556500}
+2022/02/08 14:08:44 {"callers":["D:/go_work/src/go-blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: State为必填字段,Name长度必须至少为3个字符","time":1644300524798513100}
+2022/02/08 14:09:26 {"callers":["D:/go_work/src/go-blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: Name长度必须至少为3个字符,State为必填字段,ModifiedBy为必填字段","time":1644300566188236400}
+2022/02/08 14:11:58 {"callers":["D:/go_work/src/go-blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: State为必填字段,ModifiedBy为必填字段,Name长度必须至少为3个字符","time":1644300718386582200}
+2022/02/08 14:12:54 {"callers":["D:/go_work/src/go-blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ModifiedBy为必填字段,State为必填字段","time":1644300774201506300}
+2022/02/08 14:13:12 {"callers":["D:/go_work/src/go-blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1644300792741875800}
+2022/02/08 14:13:18 {"callers":["D:/go_work/src/go-blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1644300798526993900}
+2022/02/08 14:13:26 {"callers":["D:/go_work/src/go-blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1644300806945418600}
+2022/02/08 14:14:01 {"callers":["D:/go_work/src/go-blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1644300841988610200}
+2022/02/08 14:14:57 {"callers":["D:/go_work/src/go-blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1644300897738004000}
+2022/02/08 14:15:49 {"callers":["D:/go_work/src/go-blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1644300949267798900}
+2022/02/08 14:17:03 {"callers":["D:/go_work/src/go-blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1644301023351093200}
+2022/02/08 14:17:36 {"callers":["D:/go_work/src/go-blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: Name长度必须至少为3个字符,State为必填字段","time":1644301056766226400}
+2022/02/08 14:18:09 {"callers":["D:/go_work/src/go-blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: State为必填字段","time":1644301089631522000}
+2022/02/08 14:19:52 {"callers":["D:/go_work/src/go-blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: State为必填字段","time":1644301192131970900}
+2022/02/08 14:20:04 {"callers":["D:/go_work/src/go-blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1644301204347399100}
+2022/02/08 14:20:31 {"callers":["D:/go_work/src/go-blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: State为必填字段","time":1644301231789522300}
+2022/02/08 14:20:33 {"callers":["D:/go_work/src/go-blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: State为必填字段","time":1644301233308579800}
+2022/02/08 14:22:49 {"callers":["D:/go_work/src/go-blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1644301369012059100}
+2022/02/08 14:28:39 {"callers":["D:/go_work/src/go-blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1644301719605923900}
+2022/02/08 14:40:04 {"callers":["D:/go_work/src/go-blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1644302404843962900}
+2022/02/08 14:41:47 {"callers":["D:/go_work/src/go-blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1644302507216792100}
+2022/02/08 14:43:39 {"callers":["D:/go_work/src/go-blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1644302619214434300}
+2022/02/08 14:45:18 {"callers":["D:/go_work/src/go-blog-service/main.go: 27 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1644302718213884000}

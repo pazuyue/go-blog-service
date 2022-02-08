@@ -88,10 +88,7 @@ func (t Tag) Update(c *gin.Context) {
 	return
 }
 func (t Tag) Delete(c *gin.Context) {
-
-	param := struct {
-		ID uint32 `form:"id" binding:"required,gte=1"`
-	}{convert.StrTo(c.Param("id")).MustUInt32()}
+	param := service.DeleteTagRequest{ID: convert.StrTo(c.Param("id")).MustUInt32()}
 	response := app.NewResponse(c)
 	valid, errs := app.BindAndValid(c, &param)
 	if !valid {
@@ -99,10 +96,13 @@ func (t Tag) Delete(c *gin.Context) {
 		response.ToErrorResponse(errcode.InvalidParams.WithDetails(errs.Errors()...))
 		return
 	}
-
-	response.ToResponse(gin.H{})
-	return
-
+	svc := service.New(c.Request.Context())
+	err := svc.DeleteTag(&param)
+	if err != nil {
+		global.Logger.Errorf("svc.DeleteTag err: %v", err)
+		response.ToErrorResponse(errcode.ErrorDeleteTagFail)
+		return
+	}
 	response.ToResponse(gin.H{})
 	return
 }

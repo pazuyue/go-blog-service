@@ -5,7 +5,7 @@ import "github.com/jinzhu/gorm"
 type Tag struct {
 	*Model
 	Name  string `json:"name"`
-	State uint8  `json:"state"`
+	State uint8  `gorm:"force" json:"state"`
 }
 
 func (t Tag) TableName() string {
@@ -46,8 +46,15 @@ func (t Tag) Create(db *gorm.DB) error {
 	return db.Create(&t).Error
 }
 
-func (t Tag) Update(db *gorm.DB) error {
+/*func (t Tag) Update(db *gorm.DB) error {
 	return db.Model(&Tag{}).Where("id = ? AND is_del = ?", t.ID, 0).Update(t).Error
+}*/
+
+func (t Tag) Update(db *gorm.DB, values interface{}) error {
+	if err := db.Model(t).Where("id = ? AND is_del = ?", t.ID, 0).Updates(values).Error; err != nil {
+		return err
+	}
+	return nil
 }
 
 func (t Tag) Delete(db *gorm.DB) error {
