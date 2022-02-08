@@ -3,8 +3,17 @@ package routers
 import (
 	"blog-service/internal/middleware"
 	v1 "blog-service/internal/routers/api/v1"
+	"blog-service/pkg/limiter"
 	"github.com/gin-gonic/gin"
+	"time"
 )
+
+var methodLimiters = limiter.NewMethodLimiter().AddBuckets(limiter.LimiterBucketRule{
+	Key:          "/auth",
+	FillInterval: time.Second,
+	Capacity:     10,
+	Quantum:      10,
+})
 
 func NewRouter() *gin.Engine {
 	r := gin.New()
@@ -13,6 +22,9 @@ func NewRouter() *gin.Engine {
 	r.Use(middleware.Translations())
 	r.Use(middleware.AccessLog())
 	r.Use(middleware.Recovery())
+
+	r.Use(middleware.RateLimiter(methodLimiters))
+	r.Use(middleware.ContextTimeout(60 * time.Second))
 
 	article := v1.NewArticle()
 	tag := v1.NewTag()
