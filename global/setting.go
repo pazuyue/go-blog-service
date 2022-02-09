@@ -11,4 +11,5 @@ var (
 	DatabaseSetting *setting.DatabaseSettingS
 	Logger          *logger.Logger
 	EmailSetting    *setting.EmailSettingS
+	JWTSetting      *setting.JWTSettinS
 )

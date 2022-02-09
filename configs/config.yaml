@@ -29,3 +29,8 @@ Email:
   From: 284934551@qq.com
   To:
     - yueguang@qingmutec.com
+
+JWT:
+  Secret: eddycjy
+  Issuer: blog-service
+  Expire: 7200

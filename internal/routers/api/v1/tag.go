@@ -66,6 +66,7 @@ func (t Tag) Create(c *gin.Context) {
 	response.ToResponse(gin.H{})
 	return
 }
+
 func (t Tag) Update(c *gin.Context) {
 	param := service.UpdateTagRequest{ID: convert.StrTo(c.Param("id")).MustUInt32()}
 	response := app.NewResponse(c)
