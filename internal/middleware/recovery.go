@@ -10,6 +10,9 @@ import (
 	"time"
 )
 
+/**
+系统异常，邮件监听方法
+*/
 func Recovery() gin.HandlerFunc {
 	defailtMailer := email.NewEmail(&email.SMTPInfo{
 		Host:     global.EmailSetting.Host,

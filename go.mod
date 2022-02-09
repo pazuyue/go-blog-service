@@ -3,6 +3,8 @@ module blog-service
 go 1.14
 
 require (
+	github.com/casbin/casbin v1.9.1
+	github.com/casbin/gorm-adapter v1.0.0
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/fsnotify/fsnotify v1.5.1 // indirect
 	github.com/gin-gonic/gin v1.6.3

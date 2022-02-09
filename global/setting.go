@@ -12,4 +12,5 @@ var (
 	Logger          *logger.Logger
 	EmailSetting    *setting.EmailSettingS
 	JWTSetting      *setting.JWTSettinS
+	CasbinSetting   *setting.CasbinSettingS
 )

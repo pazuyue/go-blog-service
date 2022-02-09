@@ -22,7 +22,7 @@ func NewRouter() *gin.Engine {
 	r.Use(gin.Recovery())
 	r.Use(middleware.Translations())
 	r.Use(middleware.AccessLog())
-	r.Use(middleware.Recovery())
+	//r.Use(middleware.Recovery())
 
 	r.Use(middleware.RateLimiter(methodLimiters))
 	r.Use(middleware.ContextTimeout(60 * time.Second))
@@ -31,6 +31,9 @@ func NewRouter() *gin.Engine {
 
 	article := v1.NewArticle()
 	tag := v1.NewTag()
+	casbin := v1.NewCasbin()
+	test := v1.NewTest()
+
 	apiv1 := r.Group("/api/v1")
 	apiv1.Use(middleware.JWT())
 	{
@@ -46,6 +49,16 @@ func NewRouter() *gin.Engine {
 		apiv1.PATCH("/articles/:id/state", article.Update)
 		apiv1.GET("/articles/:id", article.Get)
 		apiv1.GET("/articles", article.List)
+	}
+
+	apiv1.Use(middleware.CasbinHandler())
+	{
+		// 测试路由
+		apiv1.GET("/hello", test.Get)
+
+		// 权限策略管理
+		apiv1.POST("/casbin", casbin.Create)
+		apiv1.POST("/casbin/list", casbin.List)
 	}
 
 	return r

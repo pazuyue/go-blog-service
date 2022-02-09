@@ -7,6 +7,9 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+/**
+限流方法
+*/
 func RateLimiter(l limiter.LimiterIface) gin.HandlerFunc {
 	return func(c *gin.Context) {
 		key := l.Key(c)

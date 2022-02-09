@@ -34,3 +34,6 @@ JWT:
   Secret: eddycjy
   Issuer: blog-service
   Expire: 7200
+
+Casbin:
+  ModelPath: 'configs/rbac_model.conf'

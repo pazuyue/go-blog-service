@@ -69,6 +69,10 @@ func setupSetting() error {
 	if err != nil {
 		return err
 	}
+	err = setting.ReadSection("Casbin", &global.CasbinSetting)
+	if err != nil {
+		return err
+	}
 
 	global.JWTSetting.Expire *= time.Second
 	global.ServerSetting.ReadTimeout *= time.Second

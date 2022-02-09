@@ -20,6 +20,9 @@ func (w AccessLogWriter) Write(p []byte) (int, error) {
 	return w.ResponseWriter.Write(p)
 }
 
+/**
+请求-返回 日志存储方法
+*/
 func AccessLog() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		bodyWriter := &AccessLogWriter{body: bytes.NewBufferString(""), ResponseWriter: c.Writer}

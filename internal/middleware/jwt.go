@@ -7,6 +7,9 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+/**
+jwt 接口权限校验
+*/
 func JWT() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		var (
