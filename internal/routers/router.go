@@ -33,9 +33,11 @@ func NewRouter() *gin.Engine {
 	tag := v1.NewTag()
 	casbin := v1.NewCasbin()
 	test := v1.NewTest()
+	messageTag := v1.NewMessageTag()
 
 	apiv1 := r.Group("/api/v1")
 	apiv1.Use(middleware.JWT())
+	apiv1.Use(middleware.CasbinHandler())
 	{
 		apiv1.POST("/tags", tag.Create)
 		apiv1.DELETE("/tags/:id", tag.Delete)
@@ -49,16 +51,17 @@ func NewRouter() *gin.Engine {
 		apiv1.PATCH("/articles/:id/state", article.Update)
 		apiv1.GET("/articles/:id", article.Get)
 		apiv1.GET("/articles", article.List)
-	}
 
-	apiv1.Use(middleware.CasbinHandler())
-	{
 		// 测试路由
 		apiv1.GET("/hello", test.Get)
-
 		// 权限策略管理
 		apiv1.POST("/casbin", casbin.Create)
 		apiv1.POST("/casbin/list", casbin.List)
+	}
+
+	apiv2 := r.Group("/api/v1")
+	{
+		apiv2.POST("/message/create", messageTag.Create)
 	}
 
 	return r
