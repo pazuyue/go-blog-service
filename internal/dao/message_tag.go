@@ -8,6 +8,6 @@ func (d *Dao) CreateMessageTag(title string, state uint8, createdBy string) erro
 		State: state,
 		Model: &model.Model{CreatedBy: createdBy},
 	}
-
-	return messageTag.Create(d.engine)
+	_, error := messageTag.Create(d.engine)
+	return error
 }

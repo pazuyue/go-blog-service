@@ -12,8 +12,18 @@ func (a MessageTag) TableName() string {
 	return "blog_message_tag"
 }
 
-func (t MessageTag) Create(db *gorm.DB) error {
-	return db.Create(&t).Error
+func (t MessageTag) Create(db *gorm.DB) (uint32, error) {
+	result := db.Create(&t)
+	return t.ID, result.Error
+}
+
+func (t MessageTag) CreateOnlyNotExiste(db *gorm.DB) (uint32, error) {
+	db.First(&t, "title=?", t.Title)
+	if t.ID > 0 {
+		return t.ID, nil
+	}
+	result := db.Create(&t)
+	return t.ID, result.Error
 }
 
 func (t MessageTag) Update(db *gorm.DB, values interface{}) error {
