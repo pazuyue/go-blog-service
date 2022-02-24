@@ -1,6 +1,9 @@
 package dao
 
-import "blog-service/internal/model"
+import (
+	"blog-service/internal/model"
+	"blog-service/pkg/app"
+)
 
 func (d *Dao) CreateMessage(title string, content string, state uint8, createdBy string) (uint32, error) {
 	message := model.Message{
@@ -41,4 +44,15 @@ func (d *Dao) ReceiveMessage(title string, content string, state uint8, createdB
 	}
 	tx.Commit()
 	return err2
+}
+
+func (d *Dao) CountMessage(title string, state uint8) (int, error) {
+	message := model.Message{Title: title, State: state}
+	return message.Count(d.engine)
+}
+
+func (d *Dao) GetMessageList(title string, state uint8, page, pageSize int) ([]*model.Message, error) {
+	message := model.Message{Title: title, State: state}
+	pageOffset := app.GetPageOffset(page, pageSize)
+	return message.List(d.engine, pageOffset, pageSize)
 }

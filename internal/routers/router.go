@@ -65,6 +65,7 @@ func NewRouter() *gin.Engine {
 		apiv2.POST("/messageTag/create", messageTag.Create)
 		apiv2.POST("/message/create", message.Create)
 		apiv2.POST("/message/receiveMessage", message.ReceiveMessage)
+		apiv2.GET("/message", message.List)
 
 	}
 
