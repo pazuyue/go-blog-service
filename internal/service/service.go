@@ -16,3 +16,9 @@ func New(ctx context.Context) Service {
 	svc.dao = dao.New(global.DBEngine)
 	return svc
 }
+
+func CronNew() Service {
+	svc := Service{}
+	svc.dao = dao.New(global.DBEngine)
+	return svc
+}

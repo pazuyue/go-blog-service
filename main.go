@@ -4,9 +4,12 @@ import (
 	"blog-service/global"
 	"blog-service/internal/model"
 	"blog-service/internal/routers"
+	"blog-service/internal/service"
 	"blog-service/pkg/logger"
 	"blog-service/pkg/setting"
+	"fmt"
 	"github.com/gin-gonic/gin"
+	"github.com/robfig/cron"
 	"gopkg.in/natefinch/lumberjack.v2"
 	"log"
 	"net/http"
@@ -28,6 +31,12 @@ func init() {
 	if err != nil {
 		log.Fatalf("init.setupLogger err: %v", err)
 	}
+
+	err = setCron()
+	if err != nil {
+		log.Fatalf("init.setupLogger err: %v", err)
+	}
+
 }
 
 func main() {
@@ -98,5 +107,19 @@ func setupLogger() error {
 		LocalTime: true,
 	}, "", log.LstdFlags).WithCaller(2)
 
+	return nil
+}
+
+func setCron() error {
+	cr := cron.New()
+	cr.AddFunc("*/5 * * * * *", func() {
+		svc := service.CronNew()
+		totalRows, err := svc.CountMessage(&service.CountMessageRequest{})
+		if err != nil {
+			log.Fatalf("setCron err: %v", err)
+		}
+		fmt.Println(totalRows)
+	})
+	cr.Start()
 	return nil
 }
