@@ -1,10 +1,8 @@
 package dao
 
 import (
-	"blog-service/global"
 	"blog-service/internal/model"
 	"blog-service/pkg/app"
-	"blog-service/pkg/email"
 	"fmt"
 )
 
@@ -79,23 +77,10 @@ func (d *Dao) MessageHandleRequest(state uint8, page, pageSize int) error {
 		mt, _ := MessageTag.GetOne(d.engine)
 		switch mt.State {
 		case MAIL: //邮件发送
-			defailtMailer := email.NewEmail(&email.SMTPInfo{
-				Host:     global.EmailSetting.Host,
-				Port:     global.EmailSetting.Port,
-				IsSSL:    global.EmailSetting.IsSSL,
-				UserName: global.EmailSetting.UserName,
-				Password: global.EmailSetting.Password,
-				From:     global.EmailSetting.From,
-			})
-			err := defailtMailer.SendMail(
-				global.EmailSetting.To,
-				mt.Title,
-				v.Content,
-			)
+			err := snedEmail(v.Title, v.Content)
 			if err != nil {
-				global.Logger.Infof("mail.SendMail err: %v", err)
+				return err
 			}
-
 			v.Update(d.engine, map[string]interface{}{"state": 1})
 		}
 	}
