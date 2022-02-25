@@ -34,7 +34,6 @@ func (d *Dao) ReceiveMessage(title string, content string, state uint8, createdB
 		TagID:   tagId,
 		Title:   title,
 		Content: content,
-		State:   state,
 		Model:   &model.Model{CreatedBy: createdBy},
 	}
 	_, err2 := message.Create(tx)
