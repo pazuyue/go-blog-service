@@ -96,10 +96,7 @@ func (d *Dao) MessageHandleRequest(state uint8, page, pageSize int) error {
 				global.Logger.Infof("mail.SendMail err: %v", err)
 			}
 
-			values := map[string]interface{}{
-				"state": 1,
-			}
-			v.Update(d.engine, values)
+			v.Update(d.engine, map[string]interface{}{"state": 1})
 		}
 	}
 
