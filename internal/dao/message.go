@@ -62,6 +62,7 @@ func (d *Dao) GetMessageList(title string, state uint8, page, pageSize int) ([]*
 	return message.List(d.engine, pageOffset, pageSize)
 }
 
+//处理消息
 func (d *Dao) MessageHandleRequest(state uint8, page, pageSize int) error {
 	message := model.Message{State: state}
 	pageOffset := app.GetPageOffset(page, pageSize)
