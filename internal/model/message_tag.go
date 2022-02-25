@@ -36,3 +36,8 @@ func (t MessageTag) Update(db *gorm.DB, values interface{}) error {
 func (t MessageTag) Delete(db *gorm.DB) error {
 	return db.Where("id = ? AND is_del = ?", t.Model.ID, 0).Delete(&t).Error
 }
+
+func (t MessageTag) GetOne(db *gorm.DB) (*MessageTag, error) {
+	result := db.Model(t).Where("id = ? AND is_del = ?", t.ID, 0).First(&t)
+	return &t, result.Error
+}

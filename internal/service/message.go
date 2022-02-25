@@ -22,6 +22,10 @@ type CountMessageRequest struct {
 	State uint8  `form:"state,default=1" binding:"oneof=0 1"`
 }
 
+type MessageHandleRequest struct {
+	State uint8 `form:"state,default=1" binding:"oneof=0 1"`
+}
+
 //创建信息
 func (svc *Service) CreateMessage(param *CreateMessageRequest) (uint32, error) {
 	return svc.dao.CreateMessage(param.Title, param.Content, param.State, param.CreatedBy)
@@ -38,4 +42,8 @@ func (svc *Service) CountMessage(param *CountMessageRequest) (int, error) {
 
 func (svc *Service) GetMessageList(param *MessageListRequest, pager *app.Pager) ([]*model.Message, error) {
 	return svc.dao.GetMessageList(param.Title, param.State, pager.Page, pager.PageSize)
+}
+
+func (svc *Service) MessageHandleRequest(param *MessageListRequest, pager *app.Pager) error {
+	return svc.dao.MessageHandleRequest(param.State, pager.Page, pager.PageSize)
 }

@@ -5,9 +5,9 @@ import (
 	"blog-service/internal/model"
 	"blog-service/internal/routers"
 	"blog-service/internal/service"
+	"blog-service/pkg/app"
 	"blog-service/pkg/logger"
 	"blog-service/pkg/setting"
-	"fmt"
 	"github.com/gin-gonic/gin"
 	"github.com/robfig/cron"
 	"gopkg.in/natefinch/lumberjack.v2"
@@ -114,11 +114,8 @@ func setCron() error {
 	cr := cron.New()
 	cr.AddFunc("*/5 * * * * *", func() {
 		svc := service.CronNew()
-		totalRows, err := svc.CountMessage(&service.CountMessageRequest{})
-		if err != nil {
-			log.Fatalf("setCron err: %v", err)
-		}
-		fmt.Println(totalRows)
+		pager := app.Pager{Page: 1, PageSize: 10}
+		svc.MessageHandleRequest(&service.MessageListRequest{Title: "", State: 0}, &pager)
 	})
 	cr.Start()
 	return nil
