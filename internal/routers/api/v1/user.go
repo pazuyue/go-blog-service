@@ -57,6 +57,6 @@ func (t User) LoginByUserAndPassword(c *gin.Context) {
 		return
 	}
 
-	response.ToSuccessResponse(errcode.Success)
+	response.ToResponse(gin.H{"code": errcode.Success.Code(), "message": errcode.Success.Msg(), "token": param.Username})
 	return
 }
