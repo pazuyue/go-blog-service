@@ -35,6 +35,7 @@ func NewRouter() *gin.Engine {
 	test := v1.NewTest()
 	messageTag := v1.NewMessageTag()
 	message := v1.NewMessage()
+	user := v1.NewUser()
 
 	apiv1 := r.Group("/api/v1")
 	apiv1.Use(middleware.JWT())
@@ -66,6 +67,9 @@ func NewRouter() *gin.Engine {
 		apiv2.POST("/message/create", message.Create)
 		apiv2.POST("/message/receiveMessage", message.ReceiveMessage)
 		apiv2.GET("/message", message.List)
+		apiv2.POST("/user/create", user.Create)
+
+		apiv2.POST("/user/LoginByUserAndPassword", user.LoginByUserAndPassword)
 
 	}
 

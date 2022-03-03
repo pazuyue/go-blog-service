@@ -112,7 +112,7 @@ func setupLogger() error {
 
 func setCron() error {
 	cr := cron.New()
-	cr.AddFunc("*/5 * * * * *", func() {
+	cr.AddFunc("*/30 * * * * *", func() {
 		svc := service.CronNew()
 		pager := app.Pager{Page: 1, PageSize: 10}
 		svc.MessageHandleRequest(&service.MessageListRequest{Title: "", State: 0}, &pager)

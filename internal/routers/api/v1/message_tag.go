@@ -32,6 +32,6 @@ func (t MessageTag) Create(c *gin.Context) {
 		return
 	}
 
-	response.ToResponse(gin.H{})
+	response.ToSuccessResponse(errcode.Success)
 	return
 }

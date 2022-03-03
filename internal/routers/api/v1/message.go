@@ -37,7 +37,7 @@ func (t Message) Create(c *gin.Context) {
 		return
 	}
 
-	response.ToResponse(gin.H{})
+	response.ToSuccessResponse(errcode.Success)
 	return
 }
 
@@ -59,7 +59,7 @@ func (t Message) ReceiveMessage(c *gin.Context) {
 		response.ToErrorResponse(errcode.ErrorCreateTagFail)
 		return
 	}
-	response.ToResponse(gin.H{})
+	response.ToSuccessResponse(errcode.Success)
 	return
 }
 
