@@ -13,6 +13,7 @@ type CreateUserRequest struct {
 type LoginByUserAndPassword struct {
 	Username string `form:"username" binding:"required,min=3,max=100"`
 	Password string `form:"password" binding:"required,min=10,max=1000"`
+	*AuthRequest
 }
 
 //创建用户

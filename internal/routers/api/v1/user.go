@@ -56,7 +56,15 @@ func (t User) LoginByUserAndPassword(c *gin.Context) {
 		response.ToErrorResponse(errcode.ErrorLoginFail)
 		return
 	}
+	param2 := service.AuthRequest{param.AppKey, param.AppSecret}
+	err := svc.CheckAuth(&param2)
+	if err != nil {
+		global.Logger.Errorf("svc.CheckAuth err: %v", err)
+		response.ToErrorResponse(errcode.UnauthorizedAuthNotExist)
+		return
+	}
+	token, err := app.GenerateToken(param.AppKey, param.AppSecret)
 
-	response.ToResponse(gin.H{"code": errcode.Success.Code(), "data": gin.H{"message": errcode.Success.Msg(), "token": param.Username}})
+	response.ToResponse(gin.H{"code": errcode.Success.Code(), "data": gin.H{"message": errcode.Success.Msg(), "token": token}})
 	return
 }
