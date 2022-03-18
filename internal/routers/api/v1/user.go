@@ -5,6 +5,7 @@ import (
 	"blog-service/internal/service"
 	"blog-service/pkg/app"
 	"blog-service/pkg/errcode"
+	"fmt"
 	"github.com/gin-gonic/gin"
 )
 
@@ -76,7 +77,9 @@ func (t User) LoginByUserAndPassword(c *gin.Context) {
 
 //用户信息查询
 func (t User) Info(c *gin.Context) {
+	fmt.Println("Info")
 	param := service.Info{}
+	fmt.Println(param)
 	response := app.NewResponse(c)
 	valid, errs := app.BindAndValid(c, &param)
 	if !valid {
