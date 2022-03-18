@@ -64,7 +64,28 @@ func (t User) LoginByUserAndPassword(c *gin.Context) {
 		return
 	}
 	token, err := app.GenerateToken(param.AppKey, param.AppSecret)
+	if err != nil {
+		global.Logger.Errorf("svc.GenerateToken err: %v", err)
+		response.ToErrorResponse(errcode.UnauthorizedAuthNotExist)
+		return
+	}
 
 	response.ToResponse(gin.H{"code": errcode.Success.Code(), "data": gin.H{"message": errcode.Success.Msg(), "token": token}})
 	return
+}
+
+//用户信息查询
+func (t User) Info(c *gin.Context) {
+	param := service.Info{}
+	response := app.NewResponse(c)
+	valid, errs := app.BindAndValid(c, &param)
+	if !valid {
+		global.Logger.Errorf("app.BindAndValid errs: %v", errs)
+		response.ToErrorResponse(errcode.InvalidParams.WithDetails(errs.Errors()...))
+		return
+	}
+
+	svc := service.New(c.Request.Context())
+	result := svc.Info(&param)
+	response.ToResponse(gin.H{"code": errcode.Success.Code(), "data": gin.H{"message": errcode.Success.Msg(), "roles": "admin", "name": result.Username, "avatar": "", "introduction": ""}})
 }

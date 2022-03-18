@@ -3,7 +3,6 @@ package dao
 import (
 	"blog-service/internal/model"
 	"blog-service/internal/util"
-	"fmt"
 )
 
 func (d *Dao) CreateUserUser(username string, password string, createdBy string) error {
@@ -25,6 +24,14 @@ func (d *Dao) LoginByUserAndPassword(username string, password []byte) bool {
 	if err != nil {
 		return false
 	}
-	fmt.Println(user.Password)
 	return util.ValidatePasswords(user.Password, password)
+}
+
+func (d *Dao) Info(username string) model.SystemUser {
+	systemUser := model.SystemUser{
+		Username: username,
+	}
+	user, _ := systemUser.GetUser(d.engine)
+	return user
+
 }
