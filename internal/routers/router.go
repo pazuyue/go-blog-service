@@ -32,7 +32,6 @@ func NewRouter() *gin.Engine {
 	article := v1.NewArticle()
 	tag := v1.NewTag()
 	casbin := v1.NewCasbin()
-	test := v1.NewTest()
 	messageTag := v1.NewMessageTag()
 	message := v1.NewMessage()
 	user := v1.NewUser()
@@ -54,12 +53,10 @@ func NewRouter() *gin.Engine {
 		apiv1.GET("/articles/:id", article.Get)
 		apiv1.GET("/articles", article.List)
 
-		// 测试路由
-		apiv1.GET("/hello", test.Get)
 		// 权限策略管理
 		apiv1.POST("/casbin", casbin.Create)
 		apiv1.POST("/casbin/list", casbin.List)
-		apiv1.POST("/user/info", user.Info)
+
 	}
 
 	apiv2 := r.Group("/api/v1")
@@ -71,6 +68,7 @@ func NewRouter() *gin.Engine {
 		apiv2.POST("/user/create", user.Create)
 
 		apiv2.POST("/user/LoginByUserAndPassword", user.LoginByUserAndPassword)
+		apiv2.POST("/user/info", user.Info)
 
 	}
 
