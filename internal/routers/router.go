@@ -57,18 +57,18 @@ func NewRouter() *gin.Engine {
 		apiv1.POST("/casbin", casbin.Create)
 		apiv1.POST("/casbin/list", casbin.List)
 
+		apiv1.POST("/messageTag/create", messageTag.Create)
+		apiv1.POST("/message/create", message.Create)
+		apiv1.POST("/message/receiveMessage", message.ReceiveMessage)
+		apiv1.GET("/message", message.List)
+		apiv1.POST("/user/create", user.Create)
+		apiv1.POST("/user/info", user.Info)
 	}
 
 	apiv2 := r.Group("/api/v1")
 	{
-		apiv2.POST("/messageTag/create", messageTag.Create)
-		apiv2.POST("/message/create", message.Create)
-		apiv2.POST("/message/receiveMessage", message.ReceiveMessage)
-		apiv2.GET("/message", message.List)
-		apiv2.POST("/user/create", user.Create)
 
 		apiv2.POST("/user/LoginByUserAndPassword", user.LoginByUserAndPassword)
-		apiv2.POST("/user/info", user.Info)
 
 	}
 

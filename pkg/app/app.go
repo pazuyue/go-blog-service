@@ -29,11 +29,14 @@ func (r *Response) ToResponse(data interface{}) {
 
 func (r *Response) ToResponseList(list interface{}, totalRows int) {
 	r.Ctx.JSON(http.StatusOK, gin.H{
-		"list": list,
-		"pager": Pager{
-			Page:      GetPage(r.Ctx),
-			PageSize:  GetPageSize(r.Ctx),
-			TotalRows: totalRows,
+		"code": errcode.Success.Code(),
+		"data": gin.H{
+			"list": list,
+			"pager": Pager{
+				Page:      GetPage(r.Ctx),
+				PageSize:  GetPageSize(r.Ctx),
+				TotalRows: totalRows,
+			},
 		},
 	})
 }
