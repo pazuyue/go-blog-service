@@ -2,13 +2,12 @@ package model
 
 import (
 	"github.com/jinzhu/gorm"
-	"time"
 )
 
 type SignIn struct {
 	*Model
-	UserId   uint32    `json:"userId"`
-	SignTime time.Time `json:"signTime"`
+	UserId   uint32 `json:"userId"`
+	SignTime uint32 `json:"signTime"`
 }
 
 func (s SignIn) TableName() string {
