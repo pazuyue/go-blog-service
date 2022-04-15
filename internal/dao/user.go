@@ -15,7 +15,7 @@ func (d *Dao) CreateUserUser(username string, password string, createdBy string)
 	return systemUser.Create(d.engine)
 }
 
-func (d *Dao) LoginByUserAndPassword(username string, password []byte) bool {
+func (d *Dao) LoginByUserAndPassword(username string, password []byte, token string) bool {
 	systemUser := model.SystemUser{
 		Username: username,
 	}
@@ -24,14 +24,19 @@ func (d *Dao) LoginByUserAndPassword(username string, password []byte) bool {
 	if err != nil {
 		return false
 	}
+
+	values := map[string]interface{}{
+		"token": token,
+	}
+	_ = user.Update(d.engine, values)
 	return util.ValidatePasswords(user.Password, password)
 }
 
-func (d *Dao) Info(username string) model.SystemUser {
+func (d *Dao) Info(token string) model.SystemUser {
 	systemUser := model.SystemUser{
-		Username: username,
+		Token: token,
 	}
-	user, _ := systemUser.GetUser(d.engine)
+	user, _ := systemUser.GetUserByToken(d.engine)
 	return user
 
 }

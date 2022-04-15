@@ -49,14 +49,7 @@ func (t User) LoginByUserAndPassword(c *gin.Context) {
 		response.ToErrorResponse(errcode.InvalidParams.WithDetails(errs.Errors()...))
 		return
 	}
-
 	svc := service.New(c.Request.Context())
-	result := svc.LoginByUserAndPassword(&param)
-
-	if !result {
-		response.ToErrorResponse(errcode.ErrorLoginFail)
-		return
-	}
 	param2 := service.AuthRequest{param.AppKey, param.AppSecret}
 	err := svc.CheckAuth(&param2)
 	if err != nil {
@@ -68,6 +61,14 @@ func (t User) LoginByUserAndPassword(c *gin.Context) {
 	if err != nil {
 		global.Logger.Errorf("svc.GenerateToken err: %v", err)
 		response.ToErrorResponse(errcode.UnauthorizedAuthNotExist)
+		return
+	}
+
+	param.Token = token
+	result := svc.LoginByUserAndPassword(&param)
+
+	if !result {
+		response.ToErrorResponse(errcode.ErrorLoginFail)
 		return
 	}
 
@@ -90,5 +91,5 @@ func (t User) Info(c *gin.Context) {
 
 	svc := service.New(c.Request.Context())
 	result := svc.Info(&param)
-	response.ToResponse(gin.H{"code": errcode.Success.Code(), "data": gin.H{"message": errcode.Success.Msg(), "roles": "admin", "name": result.Username, "avatar": "", "introduction": ""}})
+	response.ToResponse(gin.H{"code": errcode.Success.Code(), "data": gin.H{"message": errcode.Success.Msg(), "roles": "admin", "user_id": result.ID, "user_name": result.Username, "avatar": "", "introduction": ""}})
 }

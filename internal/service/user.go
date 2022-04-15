@@ -14,11 +14,12 @@ type CreateUserRequest struct {
 type LoginByUserAndPassword struct {
 	Username string `form:"username" binding:"required,min=3,max=100"`
 	Password string `form:"password" binding:"required,min=10,max=1000"`
+	Token    string
 	AuthRequest
 }
 
 type Info struct {
-	Username string `form:"username" binding:"required,min=3,max=100"`
+	token string `form:"token" binding:"required,min=3"`
 }
 
 //创建用户
@@ -31,10 +32,10 @@ func (svc *Service) CreateUserUser(param *CreateUserRequest) error {
 //创建用户
 func (svc *Service) LoginByUserAndPassword(param *LoginByUserAndPassword) bool {
 	var Password []byte = []byte(param.Password)
-	return svc.dao.LoginByUserAndPassword(param.Username, Password)
+	return svc.dao.LoginByUserAndPassword(param.Username, Password, param.Token)
 }
 
 //创建用户
 func (svc *Service) Info(param *Info) model.SystemUser {
-	return svc.dao.Info(param.Username)
+	return svc.dao.Info(param.token)
 }
