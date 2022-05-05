@@ -19,7 +19,7 @@ type LoginByUserAndPassword struct {
 }
 
 type Info struct {
-	token string `form:"token" binding:"required,min=3"`
+	Token string `form:"token" binding:"required,min=3"`
 }
 
 //创建用户
@@ -35,7 +35,7 @@ func (svc *Service) LoginByUserAndPassword(param *LoginByUserAndPassword) bool {
 	return svc.dao.LoginByUserAndPassword(param.Username, Password, param.Token)
 }
 
-//创建用户
+//获取用户信息
 func (svc *Service) Info(param *Info) model.SystemUser {
-	return svc.dao.Info(param.token)
+	return svc.dao.Info(param.Token)
 }

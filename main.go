@@ -4,6 +4,8 @@ import (
 	"blog-service/global"
 	"blog-service/internal/model"
 	"blog-service/internal/routers"
+	"blog-service/internal/service"
+	"blog-service/pkg/app"
 	"blog-service/pkg/logger"
 	"blog-service/pkg/setting"
 	"github.com/gin-gonic/gin"
@@ -30,10 +32,10 @@ func init() {
 		log.Fatalf("init.setupLogger err: %v", err)
 	}
 
-	err = setCron()
+	/*err = setCron()
 	if err != nil {
 		log.Fatalf("init.setupLogger err: %v", err)
-	}
+	}*/
 
 }
 
@@ -110,11 +112,11 @@ func setupLogger() error {
 
 func setCron() error {
 	cr := cron.New()
-	/*cr.AddFunc("* * * * * *", func() {
+	cr.AddFunc("* * * * * *", func() {
 		svc := service.CronNew()
 		pager := app.Pager{Page: 1, PageSize: 10}
 		svc.MessageHandleRequest(&service.MessageListRequest{Title: "", State: 0}, &pager)
-	})*/
+	})
 	cr.Start()
 	return nil
 }

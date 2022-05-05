@@ -80,8 +80,8 @@ func (t User) LoginByUserAndPassword(c *gin.Context) {
 func (t User) Info(c *gin.Context) {
 	fmt.Println("Info")
 	param := service.Info{}
-	fmt.Println(param)
 	response := app.NewResponse(c)
+	fmt.Println(response)
 	valid, errs := app.BindAndValid(c, &param)
 	if !valid {
 		global.Logger.Errorf("app.BindAndValid errs: %v", errs)
