@@ -70,6 +70,7 @@ func NewRouter() *gin.Engine {
 	{
 		apiv2.POST("/user/LoginByUserAndPassword", user.LoginByUserAndPassword)
 		apiv2.POST("/signIn", signIn.Create)
+		apiv2.POST("/signList", signIn.List)
 	}
 
 	return r
