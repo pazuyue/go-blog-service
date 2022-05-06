@@ -53,3 +53,37 @@ func (s SystemUser) Update(db *gorm.DB, values interface{}) error {
 
 	return nil
 }
+
+func (t SystemUser) Count(db *gorm.DB) (int, error) {
+	var count int
+	if t.Username != "" {
+		db = db.Where("username = ?", t.Username)
+	}
+
+	if err := db.Model(&t).Where("is_del = ?", 0).Count(&count).Error; err != nil {
+		return 0, err
+	}
+
+	return count, nil
+}
+
+func (t SystemUser) List(db *gorm.DB, pageOffset, pageSize int, usePage uint8) ([]*SystemUser, error) {
+	var SystemUsers []*SystemUser
+	var err error
+
+	fmt.Println("usePage:", usePage)
+	if usePage == 0 {
+		if pageOffset >= 0 && pageSize > 0 {
+			db = db.Offset(pageOffset).Limit(pageSize)
+		}
+	}
+
+	if t.Username != "" {
+		db = db.Where("username = ?", t.Username)
+	}
+
+	if err = db.Where("is_del = ?", 0).Find(&SystemUsers).Error; err != nil {
+		return nil, err
+	}
+	return SystemUsers, nil
+}

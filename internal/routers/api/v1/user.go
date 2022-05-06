@@ -93,3 +93,34 @@ func (t User) Info(c *gin.Context) {
 	result := svc.Info(&param)
 	response.ToResponse(gin.H{"code": errcode.Success.Code(), "data": gin.H{"message": errcode.Success.Msg(), "roles": "admin", "user_id": result.ID, "user_name": result.Username, "avatar": "", "introduction": ""}})
 }
+
+//获取用户信息
+func (t User) List(c *gin.Context) {
+	param := service.UserList{}
+	response := app.NewResponse(c)
+	valid, errs := app.BindAndValid(c, &param)
+	if !valid {
+		global.Logger.Errorf("app.BindAndValid errs: %v", errs)
+		response.ToErrorResponse(errcode.InvalidParams.WithDetails(errs.Errors()...))
+		return
+	}
+
+	svc := service.New(c.Request.Context())
+	pager := app.Pager{Page: app.GetPage(c), PageSize: app.GetPageSize(c)}
+	totalRows, err := svc.CountUser(&param)
+	if err != nil {
+		global.Logger.Errorf("svc.CountTag err: %v", err)
+		response.ToErrorResponse(errcode.ErrorCountTagFail)
+		return
+	}
+
+	SignList, err := svc.UserList(&param, &pager)
+	if err != nil {
+		global.Logger.Errorf("svc.GetTagList err: %v", err)
+		response.ToErrorResponse(errcode.ErrorGetTagListFail)
+		return
+	}
+
+	response.ToResponseList(SignList, totalRows)
+	return
+}

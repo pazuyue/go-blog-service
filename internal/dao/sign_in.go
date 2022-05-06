@@ -10,6 +10,7 @@ func (d *Dao) CreateSign(userId uint32, signTime uint32, createdBy string) error
 		UserId:   userId,
 		SignTime: signTime,
 		Model:    &model.Model{CreatedBy: createdBy},
+		State:    1,
 	}
 	_, error := signIn.Create(d.engine)
 	return error

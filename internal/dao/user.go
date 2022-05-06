@@ -3,6 +3,7 @@ package dao
 import (
 	"blog-service/internal/model"
 	"blog-service/internal/util"
+	"blog-service/pkg/app"
 )
 
 func (d *Dao) CreateUserUser(username string, password string, createdBy string) error {
@@ -39,4 +40,15 @@ func (d *Dao) Info(token string) model.SystemUser {
 	user, _ := systemUser.GetUserByToken(d.engine)
 	return user
 
+}
+
+func (d *Dao) CountUser(userName string) (int, error) {
+	user := model.SystemUser{Username: userName}
+	return user.Count(d.engine)
+}
+
+func (d *Dao) UserList(userName string, usePage uint8, page, pageSize int) ([]*model.SystemUser, error) {
+	user := model.SystemUser{Username: userName}
+	pageOffset := app.GetPageOffset(page, pageSize)
+	return user.List(d.engine, pageOffset, pageSize, usePage)
 }

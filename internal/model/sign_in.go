@@ -6,9 +6,20 @@ import (
 
 type SignIn struct {
 	*Model
-	UserId   uint32 `json:"userId"`
 	SignTime uint32 `json:"sign_time"`
 	State    uint8  `json:"state"`
+	//外键
+	UserId uint32 `json:"user_id"`
+	User   User   `json:"systemUser";gorm:"foreignkey:UserId"` //指定关联外键
+}
+
+type User struct {
+	ID       uint32 `gorm:"primary_key" json:"-"`
+	Username string `json:"username"`
+}
+
+func (s User) TableName() string {
+	return "blog_system_user"
 }
 
 func (s SignIn) TableName() string {
@@ -40,6 +51,7 @@ func (t SignIn) Count(db *gorm.DB) (int, error) {
 func (t SignIn) List(db *gorm.DB, pageOffset, pageSize int) ([]*SignIn, error) {
 	var signIns []*SignIn
 	var err error
+	//var systemUser SystemUser
 	if pageOffset >= 0 && pageSize > 0 {
 		db = db.Offset(pageOffset).Limit(pageSize)
 	}
@@ -50,8 +62,9 @@ func (t SignIn) List(db *gorm.DB, pageOffset, pageSize int) ([]*SignIn, error) {
 	if t.State > 0 {
 		db = db.Where("state = ?", t.State)
 	}
+	db.Where("is_del = ?", 0)
 
-	if err = db.Where("is_del = ?", 0).Find(&signIns).Error; err != nil {
+	if err = db.Preload("User").Find(&signIns).Error; err != nil {
 		return nil, err
 	}
 
