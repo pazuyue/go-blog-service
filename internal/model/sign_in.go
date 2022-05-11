@@ -70,3 +70,7 @@ func (t SignIn) List(db *gorm.DB, pageOffset, pageSize int) ([]*SignIn, error) {
 
 	return signIns, nil
 }
+
+func (t SignIn) Delete(db *gorm.DB) error {
+	return db.Where("id = ? AND is_del = ?", t.Model.ID, 0).Delete(&t).Error
+}

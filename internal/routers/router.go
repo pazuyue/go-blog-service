@@ -71,6 +71,7 @@ func NewRouter() *gin.Engine {
 		apiv2.POST("/user/LoginByUserAndPassword", user.LoginByUserAndPassword)
 		apiv2.POST("/sign/signIn", signIn.Create)
 		apiv2.POST("/sign/signList", signIn.List)
+		apiv2.POST("/user/signDelete", signIn.Delete)
 		apiv2.POST("/user/userList", user.List)
 
 	}

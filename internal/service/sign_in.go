@@ -16,6 +16,10 @@ type SignListRequest struct {
 	State  uint8  `form:"state" `
 }
 
+type DelSignRequest struct {
+	UserId uint32 `json:"user_id" binding:"required,gte=1"`
+}
+
 func (svc *Service) CreateSign(param *CreateSignRequest) error {
 	return svc.dao.CreateSign(param.UserId, param.SignTime, param.CreatedBy)
 }
@@ -26,4 +30,8 @@ func (svc *Service) CountSign(param *SignListRequest) (int, error) {
 
 func (svc *Service) GetSignList(param *SignListRequest, pager *app.Pager) ([]*model.SignIn, error) {
 	return svc.dao.GetSignList(param.UserId, param.State, pager.Page, pager.PageSize)
+}
+
+func (svc *Service) DeleteSign(param *DelSignRequest) error {
+	return svc.dao.Delete(param.UserId)
 }

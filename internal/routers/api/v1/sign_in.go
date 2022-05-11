@@ -68,3 +68,26 @@ func (t SignIn) List(c *gin.Context) {
 	response.ToResponseList(SignList, totalRows)
 	return
 }
+
+func (t SignIn) Delete(c *gin.Context) {
+	param := service.DelSignRequest{}
+	response := app.NewResponse(c)
+	valid, errs := app.BindAndValid(c, &param)
+	if !valid {
+		global.Logger.Errorf("app.BindAndValid errs: %v", errs)
+		response.ToErrorResponse(errcode.InvalidParams.WithDetails(errs.Errors()...))
+		return
+	}
+	fmt.Println(param)
+
+	svc := service.New(c.Request.Context())
+	err := svc.DeleteSign(&param)
+	if err != nil {
+		global.Logger.Errorf("svc.CreateTag err: %v", err)
+		response.ToErrorResponse(errcode.ErrorCreateTagFail)
+		return
+	}
+
+	response.ToSuccessResponse(errcode.Success)
+	return
+}

@@ -26,3 +26,8 @@ func (d *Dao) GetSignList(user_id uint32, state uint8, page, pageSize int) ([]*m
 	pageOffset := app.GetPageOffset(page, pageSize)
 	return signIn.List(d.engine, pageOffset, pageSize)
 }
+
+func (d *Dao) Delete(user_id uint32) error {
+	signIn := model.SignIn{UserId: user_id}
+	return signIn.Delete(d.engine)
+}
